@@ -10,8 +10,8 @@ $('form').on('submit', (event) => {
       $('#match').html(data[50].title)
       $('#comp').html(data[50].competition.name)
       $('#date').html(data[50].date)
-      $('#video').html(data[50].url)
-    
+      $('#video').attr('href',data[50].url)
+      $('#video').text('game highlight')
     },
     () => {
         console.log('bad request')
