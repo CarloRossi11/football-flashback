@@ -20,11 +20,6 @@ $('form').on('submit', (event) => {
 
 // `http://omdbapi.com/?apikey=53aa2cd6&t=${movie}`
 
-// TO DO: \\
-// Make input field responsive
-// Make video URL provide a preview, or at least be a clickable link
-// Style the results better
-// 
 
 
 
