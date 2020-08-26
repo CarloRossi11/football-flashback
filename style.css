@@ -1,23 +1,74 @@
 body{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    background-color:  rgb(30, 69, 241);
+    background-blend-mode: darken;
+    color: white;
+}
+
+#textbar{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+#txtbx{
+    background-color: white;
+    color: rgb(30, 69, 241);
+    border-radius: 10%;
+    border-style: solid;
+    border-color: white;
+    margin-right: 10px;
+}
+
+#button{
+    background-color: white;
+    color: rgb(30, 69, 241);
+    border-radius: 10%;
+    border-style: solid;
+    border-color: white;
+    box-shadow: 0px 0px 10px black;
+    width: 125px;
+}
+#button:hover{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.middle{
+    margin: 0 auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-image: url(https://wallpapercave.com/wp/PEepxxL.jpg);
+    background-size: cover;
+    background-position: center;
+    max-width: 830px;
+    height: 508px;
+    margin-top: 10px;
+    border-radius: 2%;
+    /* box-shadow: 0px 1px 10px black; */
 }
 
 .info{
-     display: flex;
      text-align: center;
-     background-image: url(https://wallpapercave.com/wp/PEepxxL.jpg);
-     background-size: cover;
-     background-position: center;
-     width: auto;
-     height: 468px;
-     align-items: center;
-     justify-content: center;
-     margin-top: 10px;
+     align-self: center;
 }
 
 .info dl{
-    color: rgb(255, 255, 255);
-    text-shadow: 0px 1px 5px black;
+    color: white;
     line-height: 10px;
 }
+
+h2{
+    text-shadow: 0px 1px 5px black;
+}
+
+@media only screen and (max-width: 800px) {
+    .middle {
+        background-size: cover;
+        background-position: center;
+        max-width: 830px;
+        height: 508px;
+    }
+  }

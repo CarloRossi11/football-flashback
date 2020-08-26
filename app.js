@@ -1,4 +1,4 @@
-$('form').on('submit', (event) => {
+$('#button').on('click', (event) => {
     event.preventDefault()
 
     // const team = $('input').val();
