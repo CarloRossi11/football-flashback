@@ -9,11 +9,53 @@ var settings = {
 	}
 }
 
+// Carousel
+
+let currentImgIndex = 0;
+let highestIndex = $('.carousel-images').children().length - 1
+
+//next button
+$('.next').on('click', ()=> {
+    console.log('next was clicked')
+
+    //hide the current image
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+
+    //wrap the carousel back to zero if on the last image:
+        if(currentImgIndex < highestIndex) {
+            currentImgIndex ++
+        } else {
+            currentImgIndex = 0
+        }
+    //display the next image
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'block')
+})
+
+//previous button
+$('.previous').on('click', ()=> {
+    console.log('previous was clicked')
+    
+    //hide the current image
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
+
+    //wrap the carousel back to zero if on the last image:
+        if(currentImgIndex > 0) {
+            currentImgIndex --
+        } else {
+            currentImgIndex = highestIndex
+        }
+    //display the previous image
+    $('.carousel-images').children().eq(currentImgIndex).css('display', 'block')
+})
+
+
+// Flashback
+
 
 
 // "https://api-football-v1.p.rapidapi.com/v2/teams/league/2"
 
-$('#button').on('click', (event) => {
+$('.leaguelogo').on('click', (event) => {
 	event.preventDefault()
 	
 	const league = $('input').val();
