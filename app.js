@@ -70,10 +70,14 @@ $('.leaguelogo').on('click', (event) => {
 		console.log(response);
 
 		$('#team').html(response.api.teams[3].name);
-
+		
 		});
 
 })
+
+$('#team').on('click', () => {
+	modal.style.display = "block";
+  })
 
 
 // Get the modal
