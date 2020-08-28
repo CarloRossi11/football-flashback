@@ -16,6 +16,7 @@ let highestIndex = $('.carousel-images').children().length - 1
 
 //next button
 $('.next').on('click', ()=> {
+	event.preventDefault()
     console.log('next was clicked')
 
     //hide the current image
@@ -33,6 +34,7 @@ $('.next').on('click', ()=> {
 
 //previous button
 $('.previous').on('click', ()=> {
+	event.preventDefault()
 	console.log('previous was clicked')
     
     //hide the current image
@@ -55,7 +57,7 @@ $('.previous').on('click', ()=> {
 $('.leaguelogo').on('click', (event) => {
 	event.preventDefault()
 	
-	const league = $('.leaguelogo').attr('id');
+	const league = $('.carousel-images').children().eq(currentImgIndex).attr('id');
 
 	$.ajax({
 		"async": true,
@@ -69,27 +71,40 @@ $('.leaguelogo').on('click', (event) => {
 	}).done(function (response) {
 		console.log(response);
 
-		$('#team').html(response.api.teams[3].name);
-		
+		$('.middle').empty()
+
+		for(i = 0; i < response.api.teams.length; i++){
+			const mydiv = $('<div>').attr('word','team')
+			mydiv.text(response.api.teams[i].name)
+			$('.middle').append(mydiv)
+		}
+
+		const teams = $('[word]')
+		console.log(teams)
+
+		teams.on('click', () => {
+		console.log('I was clicked')
+		modal.style.display = "block";
+		$('#modaltext').html(response.api.teams[3].country)
+	
+		//close on X
+		span.onclick = function() {
+			modal.style.display = "none";
+		  }
+		//close outside of modal  
+		window.onclick = function(event) {
+			if (event.target == modal) {
+			  modal.style.display = "none";
+			}
+		  } 
+	  })
+
+
 		});
+
 
 })
 
-$('#team').on('click', () => {
-	modal.style.display = "block";
-	$('#modaltext').html(response.api.teams[3].country)
-
-	//close on X
-	span.onclick = function() {
-		modal.style.display = "none";
-	  }
-	//close outside of modal  
-	window.onclick = function(event) {
-		if (event.target == modal) {
-		  modal.style.display = "none";
-		}
-	  } 
-  })
 
 
 // Get the modal
