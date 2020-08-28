@@ -116,6 +116,11 @@ body{
     box-shadow: 0px 1px 10px black;
 }
 
+#team{
+    height: 20px;
+    cursor: pointer;
+}
+
 .info{
      text-align: center;
      align-self: center;
@@ -147,6 +152,7 @@ h2{
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
+    color: rgb(30, 69, 241);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;

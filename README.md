@@ -6,10 +6,10 @@ I am using the ScoreBat API at: https://www.api-football.com/documentation#leagu
 
 TO DO:
 
-- Figure out how to refresh the carousel pulled data
+- Figure out how to refresh the carousel pulled data so that a new league is populated when selected
 - Populate all teams in league
 - when you click on a team, you get their info in a modal
-- responsive design
+- Make sure teams are displayed responsively (flex wrap?)
 
 
 
