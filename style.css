@@ -105,7 +105,6 @@ body{
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
-    /* align-items: center; */
     justify-content: center;
     align-content: flex-start;
     background-image: url(https://wallpapercave.com/wp/PEepxxL.jpg);
@@ -178,9 +177,6 @@ h2{
     text-decoration: none;
     cursor: pointer;
   }
-
-
-
 
 @media only screen and (max-width: 800px) {
     .middle {

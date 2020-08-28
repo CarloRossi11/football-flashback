@@ -14,7 +14,7 @@ JavaScript
 jQuery
 API listed above
 
-Git Hub Pages Site: 
+Git Hub Pages Site: https://carlorossi11.github.io/soccer-selector/
 
 TO DO:
 
