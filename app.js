@@ -33,7 +33,7 @@ $('.next').on('click', ()=> {
 
 //previous button
 $('.previous').on('click', ()=> {
-    console.log('previous was clicked')
+	console.log('previous was clicked')
     
     //hide the current image
     $('.carousel-images').children().eq(currentImgIndex).css('display', 'none')
@@ -52,13 +52,10 @@ $('.previous').on('click', ()=> {
 // Flashback
 
 
-
-// "https://api-football-v1.p.rapidapi.com/v2/teams/league/2"
-
 $('.leaguelogo').on('click', (event) => {
 	event.preventDefault()
 	
-	const league = $('input').val();
+	const league = $('.leaguelogo').attr('id');
 
 	$.ajax({
 		"async": true,
@@ -72,17 +69,48 @@ $('.leaguelogo').on('click', (event) => {
 	}).done(function (response) {
 		console.log(response);
 
-		// $('#team').html(response.api.teams[3].name)
-		// $('#country').html(response.api.teams[3].country)
-		// $('#logo').html(`<img src = "${response.api.teams[3].logo}" width="150px">`)
+		$('#team').html(response.api.teams[3].name);
 
 		});
 
 })
 
 
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 
 
+// GRAVEYARD \\
+
+// "https://api-football-v1.p.rapidapi.com/v2/teams/league/2"
+
+		// Modal
+		// $('#team').html(response.api.teams[3].name)
+		// $('#country').html(response.api.teams[3].country)
+		// $('#logo').html(`<img src = "${response.api.teams[3].logo}" width="150px">`)
 
     
 //     $.ajax({

@@ -14,7 +14,7 @@
     <div class="container">
         <!-- =========== CAROUSEL TOP ============== -->
         <h1>Soccer Selector</h1>
-        <h2>First, select your league</h2>
+        <h2>First, choose your league</h2>
         <!-- =========== CAROUSEL CONTAINER ======== -->
         <div class="carousel-container">
           <!-- previous button -->
@@ -24,11 +24,11 @@
           </div>
           <!-- images -->
           <div class="carousel-images">
-            <img class="leaguelogo" id="" src="League Logos/774_french_ligue_1--primary-2008.gif" alt="Ligue 1">
-            <img class="leaguelogo" id="" src="League Logos/800px-Bundesliga_logo_(2017).svg.png" alt="Bundesliga">
-            <img class="leaguelogo" id="" src="League Logos/800px-Serie_A_logo_(2019).svg.png" alt="Serie A">
-            <img class="leaguelogo" id="" src="League Logos/La_Liga.png" alt="La Liga">
-            <img class="leaguelogo" id="" src="League Logos/Premier_League_Logo.svg.png" alt="Premier League">
+            <img class="leaguelogo" id="4" src="League Logos/774_french_ligue_1--primary-2008.gif" alt="Ligue 1">
+            <img class="leaguelogo" id="8" src="League Logos/800px-Bundesliga_logo_(2017).svg.png" alt="Bundesliga">
+            <img class="leaguelogo" id="28" src="League Logos/800px-Serie_A_logo_(2019).svg.png" alt="Serie A">
+            <img class="leaguelogo" id="30" src="League Logos/La_Liga.png" alt="La Liga">
+            <img class="leaguelogo" id="2" src="League Logos/Premier_League_Logo.svg.png" alt="Premier League">
           </div>
           <!-- next button -->
           <div class="carousel-button next">
@@ -38,31 +38,47 @@
         </div>
       </div>
 
-
+<!-- Teams & Info  -->
 
     <h2>Next, select a team below</h2>
 
-    <!-- <div id="textbar">
-        <input id="txtbx" type="text" placeholder="Soccer Team">
-        <div id="button">Get Stats</div>
-    </div> -->
-
     <div class="middle">
-        <div class="info">
-                <dl>
-                    <h2>Team</h2>
-                    <p id="team">loading...</p>
 
-                    <h2>Country</h2>
-                    <p id="country">loading...</p>
+        <div id="team"></div>
 
-                    <h2>Logo</h2>
-                    <a id="logo">loading...</a>
-                </dl>
-        </div> 
     </div>   
-    
-    <!-- Video Player: -->
-    <!-- <iframe src="https://www.scorebat.com/embed/" frameborder="0" width="600" height="760" allowfullscreen allow='autoplay; fullscreen' style="width:600px;height:760px;overflow:hidden;display:block;" class="_scorebatEmbeddedPlayer_"></iframe><script>(function(d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'https://www.scorebat.com/embed/embed.js?v=arrv'; fjs.parentNode.insertBefore(js, fjs); }(document, 'script', 'scorebat-jssdk'));</script> -->
+
 </body>
 </html>
+
+<!-- Modal -->
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+
+
+
+<!-- <div class="info">
+    <dl>
+        <h2>Team</h2>
+        <p id="team">loading...</p>
+
+        <h2>Country</h2>
+        <p id="country">loading...</p>
+
+        <h2>Logo</h2>
+        <a id="logo">loading...</a>
+    </dl>
+</div>  -->

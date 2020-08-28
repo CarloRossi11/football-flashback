@@ -6,11 +6,10 @@ I am using the ScoreBat API at: https://www.api-football.com/documentation#leagu
 
 TO DO:
 
-- Add Carousel of top 5 Leagues
-    - When you click on your league, then you can pick your team
+- Figure out how to refresh the carousel pulled data
 - Populate all teams in league
-    - when you click on a team, you get their info
-- Responsive design
+- when you click on a team, you get their info in a modal
+- responsive design
 
 
 
