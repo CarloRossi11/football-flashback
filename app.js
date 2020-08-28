@@ -74,18 +74,25 @@ $('.leaguelogo').on('click', (event) => {
 		$('.middle').empty()
 
 		for(i = 0; i < response.api.teams.length; i++){
-			const mydiv = $('<div>').attr('word','team')
+			const mydiv = $('<div>').attr('class','squad')
 			mydiv.text(response.api.teams[i].name)
 			$('.middle').append(mydiv)
 		}
 
-		const teams = $('[word]')
+		const teams = $('.squad')
 		console.log(teams)
 
 		teams.on('click', () => {
 		console.log('I was clicked')
 		modal.style.display = "block";
-		$('#modaltext').html(response.api.teams[3].country)
+		
+		$('.modalname').html("Name:  " + response.api.teams[3].name)
+		$('.modalfounded').html("Founded:  " + response.api.teams[3].founded)
+		$('.modalvenue').html("Stadium:  " + response.api.teams[3].venue_name)
+		$('.modalcity').html("City:  " + response.api.teams[3].venue_city)
+		$('.modalcountry').html("Nation:  " + response.api.teams[3].country)
+		$('.modallogo').html(`<img src = "${response.api.teams[3].logo}" width="150px">`)
+		
 	
 		//close on X
 		span.onclick = function() {
