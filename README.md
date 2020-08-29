@@ -16,7 +16,6 @@ API listed above
 
 Git Hub Pages Site: https://carlorossi11.github.io/soccer-selector/
 
-TO DO:
-
-- Populate team info responsively in modals
+Small bug to be addressed
+- team info doesn't populate when first clicked, or populates old data when first team clicked in new leage $('').empty() to resolve?
 

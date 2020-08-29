@@ -84,16 +84,20 @@ $('.leaguelogo').on('click', (event) => {
 
 		teams.on('click', () => {
 		console.log('I was clicked')
+
 		modal.style.display = "block";
-		
-		$('.modalname').html("<b>Name</b> -  " + response.api.teams[3].name)
-		$('.modalfounded').html("<b>Founded</b> -  " + response.api.teams[3].founded)
-		$('.modalvenue').html("<b>Stadium</b> -  " + response.api.teams[3].venue_name)
-		$('.modalcity').html("<b>City</b> -  " + response.api.teams[3].venue_city)
-		$('.modalcountry').html("<b>Nation</b> -  " + response.api.teams[3].country)
-		$('.modallogo').html(`<img src = "${response.api.teams[3].logo}" width="150px">`)
-		
-	
+
+		$(".squad").click(function() {
+			const teamsIndex = $(this).index();
+			console.log(teamsIndex);
+			$('.modalname').html("<b>Name</b> -  " + response.api.teams[teamsIndex].name)
+			$('.modalfounded').html("<b>Founded</b> -  " + response.api.teams[teamsIndex].founded)
+			$('.modalvenue').html("<b>Stadium</b> -  " + response.api.teams[teamsIndex].venue_name)
+			$('.modalcity').html("<b>City</b> -  " + response.api.teams[teamsIndex].venue_city)
+			$('.modalcountry').html("<b>Nation</b> -  " + response.api.teams[teamsIndex].country)
+			$('.modallogo').html(`<img src = "${response.api.teams[teamsIndex].logo}" width="150px">`)	
+		});
+
 		//close on X
 		span.onclick = function() {
 			modal.style.display = "none";
