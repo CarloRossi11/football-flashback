@@ -86,11 +86,11 @@ $('.leaguelogo').on('click', (event) => {
 		console.log('I was clicked')
 		modal.style.display = "block";
 		
-		$('.modalname').html("Name:  " + response.api.teams[3].name)
-		$('.modalfounded').html("Founded:  " + response.api.teams[3].founded)
-		$('.modalvenue').html("Stadium:  " + response.api.teams[3].venue_name)
-		$('.modalcity').html("City:  " + response.api.teams[3].venue_city)
-		$('.modalcountry').html("Nation:  " + response.api.teams[3].country)
+		$('.modalname').html("<b>Name</b> -  " + response.api.teams[3].name)
+		$('.modalfounded').html("<b>Founded</b> -  " + response.api.teams[3].founded)
+		$('.modalvenue').html("<b>Stadium</b> -  " + response.api.teams[3].venue_name)
+		$('.modalcity').html("<b>City</b> -  " + response.api.teams[3].venue_city)
+		$('.modalcountry').html("<b>Nation</b> -  " + response.api.teams[3].country)
 		$('.modallogo').html(`<img src = "${response.api.teams[3].logo}" width="150px">`)
 		
 	
