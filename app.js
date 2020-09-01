@@ -78,7 +78,7 @@ $('.leaguelogo').on('click', (event) => {
 			mydiv.text(response.api.teams[i].name)
 			$('.middle').append(mydiv)
 		}
-
+// modal
 		const teams = $('.squad')
 		console.log(teams)
 
@@ -109,14 +109,8 @@ $('.leaguelogo').on('click', (event) => {
 			}
 		  } 
 	  })
-
-
-		});
-
-
+	});
 })
-
-
 
 // Get the modal
 var modal = document.getElementById("myModal");
